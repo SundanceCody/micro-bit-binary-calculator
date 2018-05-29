@@ -49,7 +49,7 @@ void loop() {
   // (i.e. the input went from HIGH to LOW), and we've waited long enough
   // since the last button press to ignore any noise.
   // note that the micro:bit's buttons default to HIGH
-  // and pressing a button pulls it to LOW
+  // and pressing a button pulls it to LOW.
 
   // if there has been a change:
   if ((buttonRead_A != lastState_A) or (buttonRead_B != lastState_B)) {
@@ -120,10 +120,10 @@ void displayBinary() {
 
   // then we'll convert A to binary.
   int d = a; // we'll use a temporary, local variable to store A.
-  int i = 4; // we'll also use a local variable as a counter for our loops.
+  int i = 4; // we'll also use a local variable as a counter for our loops. this same variable will also be used for the horizontal position of each pixel.
 
   // we'll use a while loop to convert A into binary and display it one pixel at a time.
-  // note that this loop will run 4 times, which is important because.
+  // note that this loop will run 4 times, which is important because
   // the input could be a 4-bit number.
   while (i > 0) {
     // check to see if the remainder of d / 2 is a 1 or a 0.
@@ -164,7 +164,7 @@ void displayBinary() {
 
   // finally let's convert the sum into binary.
   d = c; // we'll reuse our temporary, local variable to store C.
-  i = 4; // we'll also reuse out local, loop counter variable.
+  i = 4; // we'll also reuse our local, loop counter variable.
 
   // we'll use one last loop to convert the sum into binary.
   // note that this loop is okay with i being equal to 0.
@@ -185,4 +185,3 @@ void displayBinary() {
     i--;
   }
 }
-
